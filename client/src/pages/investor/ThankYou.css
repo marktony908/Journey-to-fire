@@ -1,0 +1,74 @@
+.thank-you-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(255, 90, 0, 0.12),
+      transparent 40%
+    ),
+    #080808;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.thank-you-content {
+  max-width: 650px;
+}
+
+.thank-fire {
+  font-size: 65px;
+  margin-bottom: 25px;
+}
+
+.thank-small {
+  color: #ff6a00;
+  letter-spacing: 5px;
+  font-size: 11px;
+}
+
+.thank-you-content h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(55px, 9vw, 90px);
+  margin: 20px 0;
+}
+
+.thank-message {
+  color: #aaa;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.thank-divider {
+  width: 60px;
+  height: 2px;
+  background: #ff6a00;
+  margin: 30px auto;
+}
+
+.thank-quote {
+  color: #ddd;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.back-home {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 14px 25px;
+  border: 1px solid #ff6a00;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.back-home:hover {
+  background: #ff6a00;
+}

@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+.welcome-page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at center bottom,
+      rgba(255, 94, 0, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #101010 50%,
+      #050505 100%
+    );
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background fire glow */
+.fire-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 98, 0, 0.18) 0%,
+    rgba(255, 55, 0, 0.08) 40%,
+    transparent 70%
+  );
+
+  filter: blur(30px);
+
+  animation: pulse 4s ease-in-out infinite;
+}
+
+/* Main content */
+.welcome-content {
+  position: relative;
+  z-index: 2;
+
+  text-align: center;
+
+  width: 90%;
+  max-width: 800px;
+
+  padding: 40px 20px;
+}
+
+/* Fire emoji */
+.fire-symbol {
+  font-size: 58px;
+
+  margin-bottom: 20px;
+
+  animation: flame 2s ease-in-out infinite;
+}
+
+/* Small heading */
+.eyebrow {
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  color: #aaa;
+
+  margin-bottom: 20px;
+}
+
+/* Main title */
+.welcome-content h1 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(55px, 10vw, 105px);
+
+  line-height: 0.95;
+
+  font-weight: 400;
+
+  margin: 0;
+
+  letter-spacing: -4px;
+}
+
+/* Orange "to Fire" */
+.welcome-content h1 span {
+  display: block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff6a00,
+      #ffb000,
+      #ff4500
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Small orange line */
+.divider {
+  width: 70px;
+  height: 2px;
+
+  background: #ff6a00;
+
+  margin: 35px auto 25px;
+}
+
+/* Main tagline */
+.tagline {
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(22px, 4vw, 32px);
+
+  font-style: italic;
+
+  line-height: 1.4;
+
+  margin: 0 0 20px;
+
+  color: #eee;
+}
+
+/* Description */
+.description {
+  max-width: 550px;
+
+  margin: 0 auto 35px;
+
+  color: #999;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* Begin button */
+.begin-button {
+  border: 1px solid rgba(255, 106, 0, 0.6);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 81, 0, 0.15),
+      rgba(255, 153, 0, 0.08)
+    );
+
+  color: white;
+
+  padding: 17px 28px;
+
+  min-width: 240px;
+
+  cursor: pointer;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.begin-button:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #ff5a00,
+      #ff8500
+    );
+
+  border-color: #ff8500;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 35px
+    rgba(255, 85, 0, 0.25);
+}
+
+/* Arrow */
+.arrow {
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.begin-button:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* Bottom text */
+.bottom-text {
+  margin-top: 55px;
+
+  color: #555;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+/* Fire glow animation */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Flame animation */
+@keyframes flame {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-7px) scale(1.05);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .welcome-content {
+    padding: 30px 15px;
+  }
+
+  .welcome-content h1 {
+    letter-spacing: -2px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .bottom-text {
+    letter-spacing: 2px;
+  }
+}

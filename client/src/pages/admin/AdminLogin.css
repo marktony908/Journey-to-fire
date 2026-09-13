@@ -1,0 +1,316 @@
+.admin-login-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(255, 90, 20, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #070707 0%,
+      #100a07 50%,
+      #050505 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  position: relative;
+  overflow: hidden;
+
+  color: #ffffff;
+}
+
+.admin-login-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(255, 80, 0, 0.12);
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 45px;
+
+  background: rgba(18, 15, 13, 0.92);
+
+  border: 1px solid rgba(255, 100, 40, 0.2);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(255, 70, 0, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  position: relative;
+  z-index: 2;
+}
+
+.admin-login-logo {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 22px;
+
+  font-size: 34px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 85, 20, 0.12);
+
+  border: 1px solid rgba(255, 100, 40, 0.25);
+
+  box-shadow:
+    0 0 35px rgba(255, 70, 0, 0.15);
+}
+
+.admin-eyebrow {
+  text-align: center;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #ff7845;
+
+  margin-bottom: 12px;
+}
+
+.admin-login-card h1 {
+  text-align: center;
+
+  font-size: 38px;
+
+  line-height: 1.1;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.admin-login-card h1 span {
+  color: #ff6b35;
+}
+
+.admin-login-subtitle {
+  text-align: center;
+
+  color: #999;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  margin: 14px 0 32px;
+}
+
+.admin-login-error {
+  background: rgba(220, 50, 50, 0.12);
+
+  border: 1px solid rgba(255, 80, 80, 0.3);
+
+  color: #ff9999;
+
+  padding: 12px 14px;
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+.admin-input-group {
+  margin-bottom: 20px;
+}
+
+.admin-input-group label {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #999;
+
+  margin-bottom: 9px;
+}
+
+.admin-input-group input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px 16px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #2b2927;
+
+  border-radius: 10px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-input-group input::placeholder {
+  color: #555;
+}
+
+.admin-input-group input:focus {
+  border-color: #ff6935;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 90, 30, 0.08);
+}
+
+.admin-login-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 16px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #ff6b35,
+    #e43e16
+  );
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+
+  box-shadow:
+    0 10px 30px rgba(255, 70, 20, 0.18);
+}
+
+.admin-login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 35px rgba(255, 70, 20, 0.28);
+}
+
+.admin-login-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.admin-login-arrow {
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+.back-home-button {
+  display: block;
+
+  margin: 25px auto 0;
+
+  background: none;
+
+  border: none;
+
+  color: #777;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.back-home-button:hover {
+  color: #ff7845;
+}
+
+.admin-login-footer {
+  margin-top: 35px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .admin-login-page {
+    padding: 18px;
+  }
+
+  .admin-login-card {
+    padding: 30px 22px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 32px;
+  }
+}
